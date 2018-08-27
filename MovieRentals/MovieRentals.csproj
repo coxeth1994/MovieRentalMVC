@@ -205,6 +205,14 @@
     <Compile Include="Migrations\201808272327067_AddMovEmpCustTables.Designer.cs">
       <DependentUpon>201808272327067_AddMovEmpCustTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808272341398_AddTransactionTable.cs" />
+    <Compile Include="Migrations\201808272341398_AddTransactionTable.Designer.cs">
+      <DependentUpon>201808272341398_AddTransactionTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808272352542_TableUpdates.cs" />
+    <Compile Include="Migrations\201808272352542_TableUpdates.Designer.cs">
+      <DependentUpon>201808272352542_TableUpdates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -286,6 +294,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201808272327067_AddMovEmpCustTables.resx">
       <DependentUpon>201808272327067_AddMovEmpCustTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808272341398_AddTransactionTable.resx">
+      <DependentUpon>201808272341398_AddTransactionTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808272352542_TableUpdates.resx">
+      <DependentUpon>201808272352542_TableUpdates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
