@@ -49,4 +49,3 @@ namespace MovieRentals.Models
 
     }
 }
-}
