@@ -1,20 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace MovieRentals.Models
 {
+    [Table("Customer")]
     public class Customer
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        [Required]
         public Boolean type { get; set; }
+        [Required]
         public string firstName { get; set; }
+        [Required]
         public string lastName { get; set; }
+        [Required]
         public string email { get; set; }
+        [Required]
         public int phone { get; set; }
+        [Required]
         public string billingAddress { get; set; }
+        [Required]
         public int ccNum { get; set; }
+        [Required]
         public int cvvNum { get; set; }
+        [Required]
         public string expDate { get; set; }
 
 
