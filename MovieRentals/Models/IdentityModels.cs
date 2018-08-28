@@ -34,5 +34,6 @@ namespace MovieRentals.Models
         {
             return new ApplicationDbContext();
         }
+
     }
 }
