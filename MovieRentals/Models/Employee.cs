@@ -13,20 +13,20 @@ namespace MovieRentals.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        public string firstName { get; set; }
+        public string FirstName { get; set; }
         [Required]
-        public string lastName { get; set; }
+        public string LastName { get; set; }
         [Required]
-        public string email { get; set; }
+        public string Email { get; set; }
 
         public Employee() { }
 
         public Employee(int id, string firstName, string lastName, string email)
         {
             Id = id;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.email = email;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;
         }
     }
 }
