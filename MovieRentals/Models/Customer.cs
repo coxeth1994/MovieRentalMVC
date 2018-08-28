@@ -12,24 +12,34 @@ namespace MovieRentals.Models
     {
         
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(Name = "Id")]
         public int Id { get; set; }
         [Required]
+        [Display(Name = "Registered")]
         public Boolean type { get; set; }
         [Required]
+        [Display(Name = "First Name")]
         public string firstName { get; set; }
         [Required]
+        [Display(Name = "Last Name")]
         public string lastName { get; set; }
         [Required]
+        [Display(Name = "Email")]
         public string email { get; set; }
         [Required]
+        [Display(Name = "Phone")]
         public int phone { get; set; }
         [Required]
+        [Display(Name = "Billing Address")]
         public string billingAddress { get; set; }
         [Required]
+        [Display(Name = "Credit Card #")]
         public int ccNum { get; set; }
         [Required]
+        [Display(Name = "CVV #")]
         public int cvvNum { get; set; }
         [Required]
+        [Display(Name = "Expiration Date")]
         public string expDate { get; set; }
 
 
