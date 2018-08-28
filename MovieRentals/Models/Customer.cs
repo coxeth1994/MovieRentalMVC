@@ -10,6 +10,7 @@ namespace MovieRentals.Models
     [Table("Customer")]
     public class Customer
     {
+        
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
