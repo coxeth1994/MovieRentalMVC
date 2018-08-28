@@ -13,38 +13,38 @@ namespace MovieRentals.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        public Boolean Type { get; set; }
+        public Boolean type { get; set; }
         [Required]
-        public string FirstName { get; set; }
+        public string firstName { get; set; }
         [Required]
-        public string LastName { get; set; }
+        public string lastName { get; set; }
         [Required]
-        public string Email { get; set; }
+        public string email { get; set; }
         [Required]
-        public int Phone { get; set; }
+        public int phone { get; set; }
         [Required]
-        public string BillingAddress { get; set; }
+        public string billingAddress { get; set; }
         [Required]
-        public int CcNum { get; set; }
+        public int ccNum { get; set; }
         [Required]
-        public int CvvNum { get; set; }
+        public int cvvNum { get; set; }
         [Required]
-        public string ExpDate { get; set; }
+        public string expDate { get; set; }
 
 
         public Customer() { }
 
         public Customer(bool type, string firstName, string lastName, string email, int phone, string billingAddress, int ccNum, int cvvNum, string expDate)
         {
-            this.Type = type;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Email = email;
-            this.Phone = phone;
-            this.BillingAddress = billingAddress;
-            this.CcNum = ccNum;
-            this.CvvNum = cvvNum;
-            this.ExpDate = expDate;
+            this.type = type;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+            this.phone = phone;
+            this.billingAddress = billingAddress;
+            this.ccNum = ccNum;
+            this.cvvNum = cvvNum;
+            this.expDate = expDate;
         }
 
     }

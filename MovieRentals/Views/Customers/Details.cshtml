@@ -1,0 +1,98 @@
+﻿@model MovieRentals.Models.Customer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Customer</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Type)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Type)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.BillingAddress)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BillingAddress)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CcNum)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CcNum)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CvvNum)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CvvNum)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ExpDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ExpDate)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
