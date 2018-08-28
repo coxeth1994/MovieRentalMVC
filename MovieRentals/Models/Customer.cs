@@ -10,41 +10,42 @@ namespace MovieRentals.Models
     [Table("Customer")]
     public class Customer
     {
+        
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        public Boolean type { get; set; }
+        public Boolean Type { get; set; }
         [Required]
-        public string firstName { get; set; }
+        public string FirstName { get; set; }
         [Required]
-        public string lastName { get; set; }
+        public string LastName { get; set; }
         [Required]
-        public string email { get; set; }
+        public string Email { get; set; }
         [Required]
-        public int phone { get; set; }
+        public int Phone { get; set; }
         [Required]
-        public string billingAddress { get; set; }
+        public string BillingAddress { get; set; }
         [Required]
-        public int ccNum { get; set; }
+        public int CcNum { get; set; }
         [Required]
-        public int cvvNum { get; set; }
+        public int CvvNum { get; set; }
         [Required]
-        public string expDate { get; set; }
+        public string ExpDate { get; set; }
 
 
         public Customer() { }
 
         public Customer(bool type, string firstName, string lastName, string email, int phone, string billingAddress, int ccNum, int cvvNum, string expDate)
         {
-            this.type = type;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.email = email;
-            this.phone = phone;
-            this.billingAddress = billingAddress;
-            this.ccNum = ccNum;
-            this.cvvNum = cvvNum;
-            this.expDate = expDate;
+            this.Type = type;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;
+            this.Phone = phone;
+            this.BillingAddress = billingAddress;
+            this.CcNum = ccNum;
+            this.CvvNum = cvvNum;
+            this.ExpDate = expDate;
         }
 
     }
