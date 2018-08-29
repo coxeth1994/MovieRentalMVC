@@ -24,6 +24,7 @@ namespace MovieRentals.Models
         public decimal Cost { get; set; }
         [Required]
         public string Rating { get; set; }
+        [Display(Name = "Rental Duration")]
         public int RentalDuration { get; set; }
 
         public Movie()
