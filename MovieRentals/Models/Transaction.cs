@@ -21,6 +21,7 @@ namespace MovieRentals.Models
         [Required]
         public decimal Total { get; set; }
         [Required]
+        [Display(Name = "Order Date")]
         public DateTime OrderDate { get; set; }
 
         public Transaction() { }

@@ -15,6 +15,8 @@ namespace MovieRentals.Models
         [Required]
         public string Title { get; set; }
         [Required]
+        public string ImagePath { get; set; }
+        [Required]
         public string Genre { get; set; }
         [Required]
         public string Director { get; set; }
@@ -30,9 +32,11 @@ namespace MovieRentals.Models
         public Movie()
         {
         }
-        public Movie(int theId, string theGenre, string theDirector, int theYear, decimal theCost, string theRating, int theRentalDuration)
+        public Movie(int theId, string theTitle, string theImagePath, string theGenre, string theDirector, int theYear, decimal theCost, string theRating, int theRentalDuration)
         {
             Id = theId;
+            Title = theTitle;
+            ImagePath = theImagePath;
             Genre = theGenre;
             Director = theDirector;
             Year = theYear;
