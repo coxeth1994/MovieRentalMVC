@@ -17,6 +17,7 @@ namespace MovieRentals.Models
         [Required]
         public int CustomerId { get; set; }
         [Required]
+        [Display(Name = "Movie Suggestion")]
         public string MovieSuggestion { get; set; }
 
         public Suggestion() { }
