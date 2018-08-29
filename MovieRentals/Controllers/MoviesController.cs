@@ -46,7 +46,7 @@ namespace MovieRentals.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Genre,Director,Year,Cost,Rating,RentalDuration")] Movie movie)
+        public ActionResult Create([Bind(Include = "Id,Title,Genre,Director,Year,Cost,Rating,RentalDuration")] Movie movie)
         {
             if (ModelState.IsValid)
             {
