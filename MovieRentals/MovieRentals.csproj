@@ -240,6 +240,26 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\animalhouse.jpeg" />
+    <Content Include="Content\Images\annihilation.jpeg" />
+    <Content Include="Content\Images\bridesmaids.jpeg" />
+    <Content Include="Content\Images\captainunderpantsthefirstepicmovie.jpeg" />
+    <Content Include="Content\Images\deadpool.jpeg" />
+    <Content Include="Content\Images\deadpool2.jpeg" />
+    <Content Include="Content\Images\district9.jpeg" />
+    <Content Include="Content\Images\donniedarko.jpeg" />
+    <Content Include="Content\Images\harrypotterandthechamberofsecrets.jpeg" />
+    <Content Include="Content\Images\harrypotterandthedeathlyhallowspart1.jpeg" />
+    <Content Include="Content\Images\harrypotterandthedeathlyhallowspart2.jpeg" />
+    <Content Include="Content\Images\harrypotterandthegobletoffire.jpeg" />
+    <Content Include="Content\Images\harrypotterandthehalfbloodprince.jpeg" />
+    <Content Include="Content\Images\harrypotterandtheorderofthephoenix.jpeg" />
+    <Content Include="Content\Images\harrypotterandtheprisonerofazkaban.jpeg" />
+    <Content Include="Content\Images\harrypotterandthesorcerersstone.jpeg" />
+    <Content Include="Content\Images\incredibles2.jpeg" />
+    <Content Include="Content\Images\moana.jpeg" />
+    <Content Include="Content\Images\sherlockholmes.jpg" />
+    <Content Include="Content\Images\thematrix.jpeg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
