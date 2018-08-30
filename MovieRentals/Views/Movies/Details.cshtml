@@ -13,9 +13,9 @@
 </head>
 <body>
     <div>
-        <h4>@Html.DisplayFor(model => model.Title)</h4>
+        <h4>@Html.DisplayFor(model => model.Title) Details</h4>
         <hr />
-        <img src="@Html.DisplayFor(model => model.ImagePath)" alt="@Html.DisplayFor(model => model.Title)" width="400" height="600" />
+        <img src="@Url.Content(Model.ImagePath)" alt="@Html.DisplayFor(model => model.Title)" width="400" height="600" />
         <dl class="dl-horizontal">
             <dt>
                 @Html.DisplayNameFor(model => model.Title)
