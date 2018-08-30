@@ -225,6 +225,10 @@
     <Compile Include="Migrations\201808292325070_AddSuggestionsTable.Designer.cs">
       <DependentUpon>201808292325070_AddSuggestionsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808292358061_AddImagePathToMovie.cs" />
+    <Compile Include="Migrations\201808292358061_AddImagePathToMovie.Designer.cs">
+      <DependentUpon>201808292358061_AddImagePathToMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -359,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808292325070_AddSuggestionsTable.resx">
       <DependentUpon>201808292325070_AddSuggestionsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808292358061_AddImagePathToMovie.resx">
+      <DependentUpon>201808292358061_AddImagePathToMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
