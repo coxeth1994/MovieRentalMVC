@@ -17,8 +17,6 @@ namespace MovieRentals.Models
         [Required]
         public int CustomerId { get; set; }
         [Required]
-        public Movie[] Movies { get; set; }
-        [Required]
         public decimal Total { get; set; }
         [Required]
         [Display(Name = "Order Date")]
@@ -30,7 +28,6 @@ namespace MovieRentals.Models
         {
             Id = id;
             Customer = customer;
-            Movies = movies;
             Total = total;
             OrderDate = orderDate;
         }
