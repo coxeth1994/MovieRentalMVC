@@ -338,10 +338,10 @@
     <Content Include="Views\Suggestions\Details.cshtml" />
     <Content Include="Views\Suggestions\Edit.cshtml" />
     <Content Include="Views\Suggestions\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\ShoppingCart\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
