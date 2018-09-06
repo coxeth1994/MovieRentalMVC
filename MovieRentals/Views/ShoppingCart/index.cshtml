@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MovieRentals.Models.ShoppingCart>
+@model IEnumerable<Session>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+</head>
+<body>
+    @*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+    <table class="table">
+        <tr>
+            <th colspan="2">
+                @Html.DisplayNameFor(model => model.Movies)
+            </th>
+        </tr>
+        @foreach (var item in Session['cartMovies'])
+        {
+
+        }
+    @*@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }*@
+        <tr>
+            <th colspan="2">
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+        </tr>
+    </table>
+</body>
+</html>
