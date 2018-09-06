@@ -37,6 +37,6 @@ namespace MovieRentals.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<MovieRentals.Models.TransactionItem> TransactionItems { get; set; }
+        //public System.Data.Entity.DbSet<MovieRentals.Models.TransactionItem> TransactionItems { get; set; }
     }
 }
