@@ -10,107 +10,107 @@ using MovieRentals.Models;
 
 namespace MovieRentals.Controllers
 {
-    public class TransactionsController : Controller
+    public class TransactionItemsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Transactions
+        // GET: TransactionItems
         public ActionResult Index()
         {
-            return View(db.Transactions.ToList());
+            return View(db.TransactionItems.ToList());
         }
 
-        // GET: Transactions/Details/5
+        // GET: TransactionItems/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Transaction transaction = db.Transactions.Find(id);
-            if (transaction == null)
+            TransactionItem transactionItem = db.TransactionItems.Find(id);
+            if (transactionItem == null)
             {
                 return HttpNotFound();
             }
-            return RedirectToAction("TransactionItems", "Index");
+            return View(transactionItem);
         }
 
-        // GET: Transactions/Create
+        // GET: TransactionItems/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Transactions/Create
+        // POST: TransactionItems/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Total,OrderDate")] Transaction transaction)
+        public ActionResult Create([Bind(Include = "Id,TransactionId,MovieId")] TransactionItem transactionItem)
         {
             if (ModelState.IsValid)
             {
-                db.Transactions.Add(transaction);
+                db.TransactionItems.Add(transactionItem);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(transaction);
+            return View(transactionItem);
         }
 
-        // GET: Transactions/Edit/5
+        // GET: TransactionItems/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Transaction transaction = db.Transactions.Find(id);
-            if (transaction == null)
+            TransactionItem transactionItem = db.TransactionItems.Find(id);
+            if (transactionItem == null)
             {
                 return HttpNotFound();
             }
-            return View(transaction);
+            return View(transactionItem);
         }
 
-        // POST: Transactions/Edit/5
+        // POST: TransactionItems/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Total,OrderDate")] Transaction transaction)
+        public ActionResult Edit([Bind(Include = "Id,TransactionId,MovieId")] TransactionItem transactionItem)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(transaction).State = EntityState.Modified;
+                db.Entry(transactionItem).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(transaction);
+            return View(transactionItem);
         }
 
-        // GET: Transactions/Delete/5
+        // GET: TransactionItems/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Transaction transaction = db.Transactions.Find(id);
-            if (transaction == null)
+            TransactionItem transactionItem = db.TransactionItems.Find(id);
+            if (transactionItem == null)
             {
                 return HttpNotFound();
             }
-            return View(transaction);
+            return View(transactionItem);
         }
 
-        // POST: Transactions/Delete/5
+        // POST: TransactionItems/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Transaction transaction = db.Transactions.Find(id);
-            db.Transactions.Remove(transaction);
+            TransactionItem transactionItem = db.TransactionItems.Find(id);
+            db.TransactionItems.Remove(transactionItem);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

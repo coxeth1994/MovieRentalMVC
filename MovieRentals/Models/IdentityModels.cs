@@ -25,6 +25,7 @@ namespace MovieRentals.Models
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Suggestion> Suggestions { get; set; }
+        public DbSet<TransactionItem> TransactionItems { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -36,5 +37,6 @@ namespace MovieRentals.Models
             return new ApplicationDbContext();
         }
 
+        public System.Data.Entity.DbSet<MovieRentals.Models.TransactionItem> TransactionItems { get; set; }
     }
 }
