@@ -1,5 +1,4 @@
-﻿@model IEnumerable<MovieRentals.Models.ShoppingCart>
-@model IEnumerable<Session>
+﻿@model IEnumerable<MovieRentals.Models.Movie>
 
 <!DOCTYPE html>
 
@@ -15,10 +14,10 @@
     <table class="table">
         <tr>
             <th colspan="2">
-                @Html.DisplayNameFor(model => model.Movies)
+                @Html.Label("Movies")
             </th>
         </tr>
-        @foreach (var item in Session['cartMovies'])
+        @foreach (var item in Session("cartMovies"))
         {
 
         }
@@ -36,7 +35,7 @@
     }*@
         <tr>
             <th colspan="2">
-                @Html.DisplayNameFor(model => model.Total)
+                @Html.Label("Total")
             </th>
         </tr>
     </table>
