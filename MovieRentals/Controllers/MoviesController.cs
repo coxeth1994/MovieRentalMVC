@@ -17,6 +17,7 @@ namespace MovieRentals.Controllers
         // GET: Movies
         public ActionResult Index()
         {
+            this.Session["Cart"] = new List<int>();
             return View(db.Movies.ToList());
         }
 

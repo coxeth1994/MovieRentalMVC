@@ -231,6 +231,10 @@
     <Compile Include="Migrations\201808292358061_AddImagePathToMovie.Designer.cs">
       <DependentUpon>201808292358061_AddImagePathToMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809060012589_UpdatingDatabase.cs" />
+    <Compile Include="Migrations\201809060012589_UpdatingDatabase.Designer.cs">
+      <DependentUpon>201809060012589_UpdatingDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -345,10 +349,10 @@
     <Content Include="Views\TransactionItems\Details.cshtml" />
     <Content Include="Views\TransactionItems\Edit.cshtml" />
     <Content Include="Views\TransactionItems\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\ShoppingCart\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -376,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808292358061_AddImagePathToMovie.resx">
       <DependentUpon>201808292358061_AddImagePathToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809060012589_UpdatingDatabase.resx">
+      <DependentUpon>201809060012589_UpdatingDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

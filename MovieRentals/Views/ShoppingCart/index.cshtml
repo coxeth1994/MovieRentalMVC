@@ -1,27 +1,25 @@
-﻿@model IEnumerable<MovieRentals.Models.Movie>
+﻿@model IEnumerable<MovieRentals.Models.ShoppingCart>
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>index</title>
+    <title>Index</title>
 </head>
 <body>
-    @*<p>
+    <p>
         @Html.ActionLink("Create New", "Create")
-    </p>*@
+    </p>
     <table class="table">
         <tr>
-            <th colspan="2">
-                @Html.Label("Movies")
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
             </th>
+            <th></th>
         </tr>
-        @foreach (var item in Session("cartMovies"))
-        {
-
-        }
-    @*@foreach (var item in Model) {
+    
+    @foreach (var item in ViewData) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Total)
@@ -32,12 +30,8 @@
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
-    }*@
-        <tr>
-            <th colspan="2">
-                @Html.Label("Total")
-            </th>
-        </tr>
+    }
+    
     </table>
 </body>
 </html>

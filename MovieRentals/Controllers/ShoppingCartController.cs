@@ -12,6 +12,12 @@ namespace MovieRentals.Controllers
         // GET: ShoppingCart
         public ActionResult Index()
         {
+            List<int> cartMovies = Session["Cart"] as List<int>;
+
+            foreach(int id in cartMovies)
+            {
+                ViewData[id.ToString()] = id;
+            }
             return View();
         }
     }
