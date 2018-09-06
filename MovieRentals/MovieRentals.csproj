@@ -201,6 +201,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\SuggestionsController.cs" />
+    <Compile Include="Controllers\TransactionItemsController.cs" />
     <Compile Include="Controllers\TransactionsController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -339,10 +340,15 @@
     <Content Include="Views\Suggestions\Details.cshtml" />
     <Content Include="Views\Suggestions\Edit.cshtml" />
     <Content Include="Views\Suggestions\Index.cshtml" />
-    <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\TransactionItems\Create.cshtml" />
+    <Content Include="Views\TransactionItems\Delete.cshtml" />
+    <Content Include="Views\TransactionItems\Details.cshtml" />
+    <Content Include="Views\TransactionItems\Edit.cshtml" />
+    <Content Include="Views\TransactionItems\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ShoppingCart\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
