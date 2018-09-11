@@ -131,12 +131,11 @@ namespace MovieRentals.Controllers
             if(this.Session["Cart"] == null)
             {
                 this.Session["Cart"] = new List<Movie>();
-            } else
-            {
-                List<Movie> currentCart = (List<Movie>)this.Session["Cart"];
-                currentCart.Add(db.Movies.Find(id));
-                this.Session["Cart"] = currentCart;
             }
+
+            List<Movie> currentCart = (List<Movie>)this.Session["Cart"];
+            currentCart.Add(db.Movies.Find(id));
+            this.Session["Cart"] = currentCart;
 
             return RedirectToAction("Index");
         }
