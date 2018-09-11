@@ -16,5 +16,17 @@ namespace MovieRentals.Models
             Movies = theMovies;
             Total = theTotal;
         }
+
+        public decimal CalculateTotal()
+        {
+            decimal total = 0.0m;
+
+            for(int index = 0; index < Movies.Length; index++)
+            {
+                total += Movies[index].Cost;
+            }
+
+            return total;
+        }
     }
 }
