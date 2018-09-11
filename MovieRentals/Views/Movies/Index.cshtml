@@ -14,7 +14,10 @@
 <body>
     <h2>Movies</h2>
     <p>
+    @if (User.IsInRole("Admin") || (User.IsInRole("Employee")))
+        {
         @Html.ActionLink("Create New", "Create")
+        }
     </p>
     <table class="table">
         <tr>
@@ -66,9 +69,16 @@
                 @Html.DisplayFor(modelItem => item.RentalDuration)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+
+                @if (User.IsInRole("Admin") || (User.IsInRole("Employee")))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                }
+                @if (User.IsInRole("Admin") || (User.IsInRole("Employee")))
+                {
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                }
             </td>
         </tr>
     }

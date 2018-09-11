@@ -20,8 +20,9 @@
                 @Html.ActionLink("East Meets West Movies", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                @if(User.IsInRole("Admin, Employee"))
                 { 
+                @if (User.IsInRole("Admin") || (User.IsInRole("Employee")))
+                {
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     @*<li>@Html.ActionLink("About", "About", "Home")</li>
@@ -33,31 +34,32 @@
                     <li>@Html.ActionLink("Cart", "Index", "Shopping Cart")</li>
                 </ul>
                 }
-                else if(User.IsInRole("Customer"))
+                else if (User.IsInRole("Customer"))
                 {
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                         <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
                         @*<li>@Html.ActionLink("Customers", "Index", "Customers")</li>*@
-                         <li>@Html.ActionLink("Transactions", "Index", "Transactions")</li>
+                        <li>@Html.ActionLink("Transactions", "Index", "Transactions")</li>
                         <li>@Html.ActionLink("Movie Suggestions", "Index", "Suggestions")</li>
                         <li>@Html.ActionLink("Cart", "Index", "Shopping Cart")</li>
                     </ul>
                 }
                 else
                 {
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                    <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
-                    @*<li>@Html.ActionLink("Customers", "Index", "Customers")</li>
-                    <li>@Html.ActionLink("Transactions", "Index", "Transactions")</li>*@
-                    <li>@Html.ActionLink("Movie Suggestions", "Index", "Suggestions")</li>
-                    <li>@Html.ActionLink("Cart", "Index", "Shopping Cart")</li>
-                </ul>
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                        <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
+                        @*<li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                            <li>@Html.ActionLink("Transactions", "Index", "Transactions")</li>*@
+                        <li>@Html.ActionLink("Movie Suggestions", "Index", "Suggestions")</li>
+                        <li>@Html.ActionLink("Cart", "Index", "Shopping Cart")</li>
+                    </ul>
+                }
                 }
                 @Html.Partial("_LoginPartial")
             </div>
