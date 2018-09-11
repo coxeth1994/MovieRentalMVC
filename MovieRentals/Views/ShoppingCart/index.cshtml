@@ -14,15 +14,20 @@
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Total)
+                Movie Title
             </th>
-            <th></th>
+            <th>
+                Price
+            </th>
         </tr>
     
-    @foreach (var item in ViewData) {
+    @foreach (var item in (IEnumerable<MovieRentals.Models.Movie>)ViewData["Cart"]) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Total)
+                @item.Title
+            </td>
+            <td>
+                @item.Cost
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
@@ -31,6 +36,12 @@
             </td>
         </tr>
     }
+        <tr>
+            <th>Cart Total</th>
+            <td>
+
+            </td>
+        </tr>
     
     </table>
 </body>

@@ -350,6 +350,7 @@
     <Content Include="Views\TransactionItems\Edit.cshtml" />
     <Content Include="Views\TransactionItems\Index.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\Empty.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
