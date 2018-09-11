@@ -17,7 +17,6 @@ namespace MovieRentals.Controllers
         // GET: Movies
         public ActionResult Index()
         {
-            this.Session["Cart"] = new List<int>();
             return View(db.Movies.ToList());
         }
 
@@ -123,6 +122,22 @@ namespace MovieRentals.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        // Add item to Shopping Cart
+        public ActionResult AddToCart(int id)
+        {
+            if(this.Session["Cart"] == null)
+            {
+                this.Session["Cart"] = new List<Movie>();
+            } else
+            {
+                List<Movie> currentCart = (List<Movie>)this.Session["Cart"];
+                currentCart.Add(db.Movies.Find(id));
+                this.Session["Cart"] = currentCart;
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

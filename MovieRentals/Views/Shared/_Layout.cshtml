@@ -30,7 +30,7 @@
                     <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
                     <li>@Html.ActionLink("Transactions", "Index", "Transactions")</li>
                     <li>@Html.ActionLink("Movie Suggestions", "Index", "Suggestions")</li>
-                    <li>@Html.ActionLink("Cart", "Index", "Shopping Cart")</li>
+                    <li>@Html.ActionLink("Cart", "Index", "ShoppingCart")</li>
                 </ul>
                 }
                 else if(User.IsInRole("Customer"))
@@ -43,7 +43,7 @@
                         @*<li>@Html.ActionLink("Customers", "Index", "Customers")</li>*@
                          <li>@Html.ActionLink("Transactions", "Index", "Transactions")</li>
                         <li>@Html.ActionLink("Movie Suggestions", "Index", "Suggestions")</li>
-                        <li>@Html.ActionLink("Cart", "Index", "Shopping Cart")</li>
+                        <li>@Html.ActionLink("Cart", "Index", "ShoppingCart")</li>
                     </ul>
                 }
                 else
@@ -56,7 +56,7 @@
                     @*<li>@Html.ActionLink("Customers", "Index", "Customers")</li>
                     <li>@Html.ActionLink("Transactions", "Index", "Transactions")</li>*@
                     <li>@Html.ActionLink("Movie Suggestions", "Index", "Suggestions")</li>
-                    <li>@Html.ActionLink("Cart", "Index", "Shopping Cart")</li>
+                    <li>@Html.ActionLink("Cart", "Index", "ShoppingCart")</li>
                 </ul>
                 }
                 @Html.Partial("_LoginPartial")
