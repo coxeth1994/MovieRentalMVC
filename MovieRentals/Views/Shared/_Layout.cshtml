@@ -20,7 +20,6 @@
                 @Html.ActionLink("East Meets West Movies", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                { 
                 @if (User.IsInRole("Admin") || (User.IsInRole("Employee")))
                 {
                 <ul class="nav navbar-nav">
@@ -59,7 +58,6 @@
                         <li>@Html.ActionLink("Movie Suggestions", "Index", "Suggestions")</li>
                         <li>@Html.ActionLink("Cart", "Index", "ShoppingCart")</li>
                     </ul>
-                }
                 }
                 @Html.Partial("_LoginPartial")
             </div>
