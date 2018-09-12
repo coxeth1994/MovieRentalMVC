@@ -7,26 +7,26 @@ namespace MovieRentals.Models
 {
     public class ShoppingCart
     {
-        public Movie[] Movies { get; set; }
+        public List<Movie> Movies { get; set; }
         public decimal Total { get; set; }
 
         public ShoppingCart() { }
-        public ShoppingCart(Movie[] theMovies, decimal theTotal)
+        public ShoppingCart(List<Movie> theMovies)
         {
             Movies = theMovies;
-            Total = theTotal;
+            
         }
 
-        public decimal CalculateTotal()
+        public void CalculateTotal()
         {
             decimal total = 0.0m;
 
-            for(int index = 0; index < Movies.Length; index++)
+            foreach(Movie m in Movies)
             {
-                total += Movies[index].Cost;
+                total += m.Cost;
             }
 
-            return total;
+            Total = total;
         }
     }
 }

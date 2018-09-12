@@ -15,6 +15,9 @@ namespace MovieRentals.Controllers
             List<Movie> cartMovies = Session["Cart"] as List<Movie>;
             if(cartMovies != null && cartMovies.Count != 0)
             {
+                ShoppingCart movies = new ShoppingCart(cartMovies);
+                movies.CalculateTotal();
+                ViewData["Total"] = movies.Total;
                 ViewData["Cart"] = this.Session["Cart"];
 
                 return View();
