@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<MovieRentals.Models.ShoppingCart>
-
 <!DOCTYPE html>
 
 <html>
@@ -20,7 +19,7 @@
             </th>
         </tr>
     
-    @foreach (var item in (IEnumerable<MovieRentals.Models.Movie>)ViewData["Cart"]) {
+    @foreach (var item in ((IEnumerable<MovieRentals.Models.Movie>)ViewData["Cart"])) {
         <tr>
             <td>
                 @item.Title

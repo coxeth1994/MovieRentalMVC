@@ -20,6 +20,7 @@ namespace MovieRentals.Controllers
                 ViewData["Total"] = movies.Total;
                 ViewData["Cart"] = this.Session["Cart"];
 
+
                 return View();
             } else
             {
