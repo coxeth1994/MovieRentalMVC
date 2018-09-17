@@ -50,5 +50,12 @@ namespace MovieRentals.Controllers
 
             return RedirectToAction("Index");
         }
+        
+        public ActionResult Checkout()
+        {
+
+
+            return View();
+        }
     }
 }

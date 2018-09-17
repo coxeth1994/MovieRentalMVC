@@ -58,6 +58,15 @@ namespace MovieRentals.Controllers
             return View(transaction);
         }
 
+        public ActionResult AddTransaction(Transaction transaction)
+        {
+
+            db.Transactions.Add(transaction);
+            db.SaveChanges();
+
+            return RedirectToAction("TransactionItems", "AddItems");
+        }
+
         // GET: Transactions/Edit/5
         public ActionResult Edit(int? id)
         {
