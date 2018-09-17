@@ -1,31 +1,35 @@
-﻿@model MovieRentals.Models.Suggestion
+﻿@model MovieRentals.Models.MovieSuggestion
+
+@*@{
+        Layout = null;
+    }*@
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Suggestion Details</title>
+    <title>Details</title>
 </head>
 <body>
     <div>
-        <h4>Suggestion</h4>
+        <h4>MovieSuggestion</h4>
         <hr />
         <dl class="dl-horizontal">
             <dt>
-                @Html.DisplayNameFor(model => model.Customer.firstName)
+                @Html.DisplayNameFor(model => model.FullName)
             </dt>
     
             <dd>
-                @Html.DisplayFor(model => model.Customer.firstName)
+                @Html.DisplayFor(model => model.FullName)
             </dd>
     
             <dt>
-                @Html.DisplayNameFor(model => model.MovieSuggestion)
+                @Html.DisplayNameFor(model => model.Suggestion)
             </dt>
     
             <dd>
-                @Html.DisplayFor(model => model.MovieSuggestion)
+                @Html.DisplayFor(model => model.Suggestion)
             </dd>
     
         </dl>

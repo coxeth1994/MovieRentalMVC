@@ -199,8 +199,8 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MovieSuggestionsController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
-    <Compile Include="Controllers\SuggestionsController.cs" />
     <Compile Include="Controllers\TransactionItemsController.cs" />
     <Compile Include="Controllers\TransactionsController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
@@ -235,6 +235,10 @@
     <Compile Include="Migrations\201809060012589_UpdatingDatabase.Designer.cs">
       <DependentUpon>201809060012589_UpdatingDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809172320257_AddSuggestionTable.cs" />
+    <Compile Include="Migrations\201809172320257_AddSuggestionTable.Designer.cs">
+      <DependentUpon>201809172320257_AddSuggestionTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -242,8 +246,8 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieSuggestion.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
-    <Compile Include="Models\Suggestion.cs" />
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Models\TransactionItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -339,11 +343,6 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
-    <Content Include="Views\Suggestions\Create.cshtml" />
-    <Content Include="Views\Suggestions\Delete.cshtml" />
-    <Content Include="Views\Suggestions\Details.cshtml" />
-    <Content Include="Views\Suggestions\Edit.cshtml" />
-    <Content Include="Views\Suggestions\Index.cshtml" />
     <Content Include="Views\TransactionItems\Create.cshtml" />
     <Content Include="Views\TransactionItems\Delete.cshtml" />
     <Content Include="Views\TransactionItems\Details.cshtml" />
@@ -351,6 +350,11 @@
     <Content Include="Views\TransactionItems\Index.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
     <Content Include="Views\ShoppingCart\Empty.cshtml" />
+    <Content Include="Views\MovieSuggestions\Create.cshtml" />
+    <Content Include="Views\MovieSuggestions\Delete.cshtml" />
+    <Content Include="Views\MovieSuggestions\Details.cshtml" />
+    <Content Include="Views\MovieSuggestions\Edit.cshtml" />
+    <Content Include="Views\MovieSuggestions\Index.cshtml" />
     <Content Include="Views\ShoppingCart\Checkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -385,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809060012589_UpdatingDatabase.resx">
       <DependentUpon>201809060012589_UpdatingDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809172320257_AddSuggestionTable.resx">
+      <DependentUpon>201809172320257_AddSuggestionTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

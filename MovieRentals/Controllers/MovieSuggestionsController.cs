@@ -10,112 +10,107 @@ using MovieRentals.Models;
 
 namespace MovieRentals.Controllers
 {
-    public class SuggestionsController : Controller
+    public class MovieSuggestionsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Suggestions
+        // GET: MovieSuggestions
         public ActionResult Index()
         {
-            var suggestions = db.Suggestions.Include(s => s.Customer);
-            return View(suggestions.ToList());
+            return View(db.Suggestions.ToList());
         }
 
-        // GET: Suggestions/Details/5
+        // GET: MovieSuggestions/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Suggestion suggestion = db.Suggestions.Find(id);
-            if (suggestion == null)
+            MovieSuggestion movieSuggestion = db.Suggestions.Find(id);
+            if (movieSuggestion == null)
             {
                 return HttpNotFound();
             }
-            return View(suggestion);
+            return View(movieSuggestion);
         }
 
-        // GET: Suggestions/Create
+        // GET: MovieSuggestions/Create
         public ActionResult Create()
         {
-            ViewBag.CustomerId = new SelectList(db.Customers, "Id", "firstName");
             return View();
         }
 
-        // POST: Suggestions/Create
+        // POST: MovieSuggestions/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,CustomerId,MovieSuggestion")] Suggestion suggestion)
+        public ActionResult Create([Bind(Include = "Id,FullName,Suggestion")] MovieSuggestion movieSuggestion)
         {
             if (ModelState.IsValid)
             {
-                db.Suggestions.Add(suggestion);
+                db.Suggestions.Add(movieSuggestion);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CustomerId = new SelectList(db.Customers, "Id", "firstName", suggestion.CustomerId);
-            return View(suggestion);
+            return View(movieSuggestion);
         }
 
-        // GET: Suggestions/Edit/5
+        // GET: MovieSuggestions/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Suggestion suggestion = db.Suggestions.Find(id);
-            if (suggestion == null)
+            MovieSuggestion movieSuggestion = db.Suggestions.Find(id);
+            if (movieSuggestion == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CustomerId = new SelectList(db.Customers, "Id", "firstName", suggestion.CustomerId);
-            return View(suggestion);
+            return View(movieSuggestion);
         }
 
-        // POST: Suggestions/Edit/5
+        // POST: MovieSuggestions/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,CustomerId,MovieSuggestion")] Suggestion suggestion)
+        public ActionResult Edit([Bind(Include = "Id,FullName,Suggestion")] MovieSuggestion movieSuggestion)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(suggestion).State = EntityState.Modified;
+                db.Entry(movieSuggestion).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CustomerId = new SelectList(db.Customers, "Id", "firstName", suggestion.CustomerId);
-            return View(suggestion);
+            return View(movieSuggestion);
         }
 
-        // GET: Suggestions/Delete/5
+        // GET: MovieSuggestions/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Suggestion suggestion = db.Suggestions.Find(id);
-            if (suggestion == null)
+            MovieSuggestion movieSuggestion = db.Suggestions.Find(id);
+            if (movieSuggestion == null)
             {
                 return HttpNotFound();
             }
-            return View(suggestion);
+            return View(movieSuggestion);
         }
 
-        // POST: Suggestions/Delete/5
+        // POST: MovieSuggestions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Suggestion suggestion = db.Suggestions.Find(id);
-            db.Suggestions.Remove(suggestion);
+            MovieSuggestion movieSuggestion = db.Suggestions.Find(id);
+            db.Suggestions.Remove(movieSuggestion);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
