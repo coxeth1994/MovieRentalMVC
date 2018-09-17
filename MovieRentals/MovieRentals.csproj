@@ -355,6 +355,7 @@
     <Content Include="Views\MovieSuggestions\Details.cshtml" />
     <Content Include="Views\MovieSuggestions\Edit.cshtml" />
     <Content Include="Views\MovieSuggestions\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\Checkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
