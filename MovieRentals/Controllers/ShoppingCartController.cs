@@ -9,6 +9,7 @@ namespace MovieRentals.Controllers
 {
     public class ShoppingCartController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: ShoppingCart
         public ActionResult Index()
         {
@@ -49,6 +50,29 @@ namespace MovieRentals.Controllers
             Session["Cart"] = cartMovies;
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Checkout()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Checkout([Bind(Include = "Id,Type,FirstName,LastName,Email,Phone,BillingAddress,CcNum,CvvNum,ExpDate")] Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Customers.Add(customer);
+                db.SaveChanges();
+                return RedirectToAction("AddTransaction", "Transaction");
+            }
+
+            return RedirectToAction("Checkout");
+        }
+
+        public ActionResult ThankYou()
+        {
+            return View();
         }
     }
 }

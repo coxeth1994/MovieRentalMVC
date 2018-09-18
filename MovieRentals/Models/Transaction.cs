@@ -23,9 +23,8 @@ namespace MovieRentals.Models
 
         public Transaction() { }
 
-        public Transaction(int id, Customer customer, Movie[] movies, decimal total, DateTime orderDate)
+        public Transaction(Customer customer, decimal total, DateTime orderDate)
         {
-            Id = id;
             Customer = customer;
             Total = total;
             OrderDate = orderDate;

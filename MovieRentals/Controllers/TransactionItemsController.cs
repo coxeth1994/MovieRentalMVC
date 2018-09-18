@@ -58,6 +58,20 @@ namespace MovieRentals.Controllers
             return View(transactionItem);
         }
 
+        public ActionResult AddItems(Transaction transaction)
+        {
+            List<Movie> cartMovies = Session["Cart"] as List<Movie>;
+
+            foreach(Movie m in cartMovies)
+            {
+                TransactionItem item = new TransactionItem(transaction.Id, m.Id);
+                db.TransactionItems.Add(item);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("ThankYou", "ShoppingCart");
+        }
+
         // GET: TransactionItems/Edit/5
         public ActionResult Edit(int? id)
         {

@@ -21,9 +21,8 @@ namespace MovieRentals.Models
 
         public TransactionItem() { }
 
-        public TransactionItem(int id, int transactionId, int movieId)
+        public TransactionItem(int transactionId, int movieId)
         {
-            Id = id;
             TransactionId = transactionId;
             MovieId = movieId;
         }
