@@ -69,7 +69,7 @@ namespace MovieRentals.Controllers
                 db.SaveChanges();
             }
 
-            return RedirectToAction("Home", "Index");
+            return RedirectToAction("ThankYou", "ShoppingCart");
         }
 
         // GET: TransactionItems/Edit/5
