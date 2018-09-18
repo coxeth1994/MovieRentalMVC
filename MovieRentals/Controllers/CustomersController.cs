@@ -58,6 +58,18 @@ namespace MovieRentals.Controllers
             return View(customer);
         }
 
+        public ActionResult Add([Bind(Include = "Id,Type,FirstName,LastName,Email,Phone,BillingAddress,CcNum,CvvNum,ExpDate")] Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Customers.Add(customer);
+                db.SaveChanges();
+                return RedirectToAction("ShoppingCart", "ThankYou");
+            }
+
+            return RedirectToAction("ShoppingCart", "Checkout");
+        }
+
         // GET: Customers/Edit/5
         public ActionResult Edit(int? id)
         {

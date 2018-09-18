@@ -58,9 +58,11 @@ namespace MovieRentals.Controllers
             return View(transaction);
         }
 
-        public ActionResult AddTransaction(Transaction transaction)
+        public ActionResult AddTransaction(int customerId, bool type, string firstName, string lastname, string email, int phone, string bill, int cc, int cvv, string exp, decimal total)
         {
-
+            Customer customer = new Models.Customer(type, firstName, lastname, email, phone, bill, cc, cvv, exp);
+            customer.Id = customerId;
+            Transaction transaction = new Models.Transaction(customer, total, DateTime.Now);
             db.Transactions.Add(transaction);
             db.SaveChanges();
 
